@@ -1,0 +1,20 @@
+{
+  "name": "Workshop Shop (Bluebox OTel)",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "secrets": {
+    "OTEL_EXPORTER_OTLP_ENDPOINT": {
+      "description": "OTLP endpoint URL from Bluebox Setup (e.g. https://<your-endpoint>)"
+    },
+    "OTEL_EXPORTER_OTLP_HEADERS": {
+      "description": "Full OTLP header value from Bluebox Setup (no angle brackets)"
+    }
+  },
+  "forwardPorts": [8088],
+  "portsAttributes": {
+    "8088": { "label": "Workshop Shop", "onAutoForward": "openBrowser" }
+  },
+  "postCreateCommand": "npm ci"
+}

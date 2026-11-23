@@ -30,3 +30,12 @@ export OTEL_EXPORTER_OTLP_HEADERS="<header value from Bluebox Setup>"
 # Start the app (pulls images, waits for readiness)
 make up
 ```
+
+### OTel in GitHub Codespaces
+
+This version is set up for Codespaces. Add these two as **Codespaces secrets** (GitHub → Settings → Codespaces → Secrets, with access granted to this repo), and they are injected as environment variables automatically, so no `export` is needed:
+
+- `OTEL_EXPORTER_OTLP_ENDPOINT`
+- `OTEL_EXPORTER_OTLP_HEADERS`
+
+Then just run `make up`. (If a secret is missing, Codespaces prompts for it when creating the codespace.)
