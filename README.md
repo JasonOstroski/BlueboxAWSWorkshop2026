@@ -38,4 +38,4 @@ This version is set up for Codespaces. Add these two as **Codespaces secrets** (
 - `OTEL_EXPORTER_OTLP_ENDPOINT`
 - `OTEL_EXPORTER_OTLP_HEADERS`
 
-Then just run `make up`. (If a secret is missing, Codespaces prompts for it when creating the codespace.)
+Then just run `make up`. Both are optional: without them the app runs with no OTel export.
